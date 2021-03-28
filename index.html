@@ -7,92 +7,77 @@
 
     <link rel="stylesheet" href="./assets/style.css" />
     <!--Adding Google Fonts to style the webpage-->
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous"
+  /> 
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"/>
-    <!--Adding bootstrap and jquery to link of the webpage-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <!--Adding moment.js to load the times and dates-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   
-    <title>Work Day Scheduler</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  />
+   <title>Work Day Scheduler</title>
   </head>
   <body>
     <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for planning your work day</p>
+      <h1 class="display-3">Work Day Scheduler <img src="./assets/images/calendar2-date-fill.svg"/></h1>
+      <p class="lead">A simple calendar app for planning your work day <img src="./assets/images/alarm-fill.svg"/></p>
       <p id="currentDay" class="lead"></p>
     </header>
 
     <div class="container">
-    <!--Using table to create a day planner -->
-        <div class="table-responsive-lg">
-            <table class="table">
-    <!--table class -->
-                <div class="row">
-                    <tr id="head">
-                        <div class="row">
-                            <th scope="col">Time</th>
-                            <th scope="col">To Do List</th>
-                            <th scope="col">Save </th>
-                        </div>
-                    </tr>
-                </div>
-            </table>
-        </div>
-    </div>
 <!-- Timeblocks go here, using Military Time as an id  -->
-    <tbody class="body">
-      <tr class="time" id="8">
-        <th scope="row" class="time8" ></th>
-        <td><textarea name="" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
-        <td> <img class="save" src="./assets/images/save-fill.svg" width="30" alt="save button"> </td>
-      </tr>
-      <tr class="time" id="9">
-        <th scope="row" class="time9" ></th>
-        <td><textarea name="text" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
-        <td><img class="save" src="./assets/images/save-fill.svg" width="30" alt="save button"></td>
-      </tr>
-      <tr class="time" id="10">
-        <th scope="row" class="time10"></th>
-        <td><textarea name="" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
-        <td><img class="save" src="./assets/images/save-fill.svg" width="30" alt="save button"></td>
-      </tr>
-      <tr class="time" id="11">
-        <th scope="row" class="time11"></th>
-        <td><textarea name="" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
-        <td><img class="save" src="./assets/images/save-fill.svg" width="30" alt="save button"></td>
-      </tr>
-      <tr class="time" id="12">
-        <th scope="row" class="time12"></th>
-        <td><textarea name="" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
-        <td><img class="save" src="./assets/images/save-fill.svg" width="30" alt="save button"></td>
-      </tr>
-      <tr class="time" id="13">
-        <th scope="row" class="time1"></th>
-        <td><textarea name="" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
-        <td><img class="save" src="./assets/images/save-fill.svg" width="30" alt="save button"></td>
-      </tr>
-      <tr class="time" id="14">
-        <th scope="row" class="time2"></th>
-        <td><textarea name="" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
-        <td><img class="save" src="./assets/images/save-fill.svg" width="30" alt="save button"></td>
-      </tr>
-      <tr class="time" id="15">
-        <th scope="row" class="time3"></th>
-        <td><textarea name="" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
-        <td><img class="save" src="./assets/images/save-fill.svg" width="30" alt="save button"></td>
-      </tr>
-      <tr class="time" id="16">
-        <th scope="row" class="time4"></th>
-        <td><textarea name="" class="text" cols="100" rows="3" placeholder="Type Here"></textarea></td>
-        <td><img class="save" src="./assets/images/save-fill.svg" width="30" alt="save button"></td>
-      </tr>
-    </tbody>
-  </div>
-  </table>
-</div>
-</div> 
+  <form id="hour-08" class="row time-block">
+  <div class="col-1 hour">8am</div>
+  <textarea hour="08" class="col-10 description" id="eventDetails" rows="3"></textarea>
+  <button type="button" class="col-1 saveBtn" hour-block="hour-09"><img src="./assets/images/save-fill.svg"/> </button>
+</form>
+<form id="hour-09" class="row time-block">
+  <div class="col-1 hour">9am</div>
+  <textarea hour="09" class="col-10 description" id="eventDetails" rows="3"></textarea>
+  <button type="button" class="col-1 saveBtn" hour-block="hour-09"><img src="./assets/images/save-fill.svg"/></button>
+</form>
+<form class="row time-block">
+  <div id="hour-10" class="col-1 hour">10am</div>
+  <textarea hour="10" class="col-10 description" id="eventDetails" rows="3"></textarea>
+  <button type="button" class="col-1 saveBtn"><img src="./assets/images/save-fill.svg"/></button>
+</form>
+<form id="hour-11" class="row time-block">
+  <div class="col-1 hour">11am</div>
+  <textarea hour="11" class="col-10 description" id="eventDetails" rows="3"></textarea>
+  <button type="button" class="col-1 saveBtn"><img src="./assets/images/save-fill.svg"/></button>
+</form>
+<form id="hour-12" class="row time-block">
+  <div class="col-1 hour">12pm</div>
+  <textarea hour="12" class="col-10 description" id="eventDetails" rows="3"></textarea>
+  <button type="button" class="col-1 saveBtn"><img src="./assets/images/save-fill.svg"/></button>
+</form>
+<form id="hour-13" class="row time-block">
+  <div class="col-1 hour">1pm</div>
+  <textarea hour="13" class="col-10 description" id="eventDetails" rows="3"></textarea>
+  <button type="button" class="col-1 saveBtn"><img src="./assets/images/save-fill.svg"/></button>
+</form>
+<form id="hour-14" class="row time-block">
+  <div class="col-1 hour">2pm</div>
+  <textarea hour="14" class="col-10 description" id="eventDetails" rows="3"></textarea>
+  <button type="button" class="col-1 saveBtn"><img src="./assets/images/save-fill.svg"/></button>
+</form>
+<form id="hour-15" class="row time-block">
+  <div class="col-1 hour">3pm</div>
+  <textarea hour="15" class="col-10 description" id="eventDetails" rows="3"></textarea>
+  <button type="button" class="col-1 saveBtn"><img src="./assets/images/save-fill.svg"/></button>
+</form>
+<form id="hour-16" class="row time-block">
+  <div class="col-1 hour">4pm</div>
+  <textarea hour="16" class="col-10 description" id="eventDetails" rows="3"></textarea>
+  <button type="button" class="col-1 saveBtn"><img src="./assets/images/save-fill.svg"/></button>
+</form>
+  
   </body>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
    <script src="./assets/script.js"></script>
 </html>
