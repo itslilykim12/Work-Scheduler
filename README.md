@@ -10,6 +10,7 @@ Moment.js
 
 # Sample image of website 
 
+![Work Scheduler](https://user-images.githubusercontent.com/78708872/112765010-249ee380-8fd9-11eb-8453-352a5707bc0d.PNG)
 
 
 # Resources 
